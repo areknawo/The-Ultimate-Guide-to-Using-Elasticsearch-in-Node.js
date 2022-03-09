@@ -35,7 +35,7 @@ app.get("/is-authenticated", (req, res) => {
   }
 });
 
-app.get("/", requiresAuth(), (req, res) => {
+app.get("/", (req, res) => {
   res.redirect("http://localhost:3000/");
 });
 
@@ -79,4 +79,5 @@ securedRouter.get("/posts", async (req, res) => {
   res.send(result);
 });
 
+app.use(securedRouter);
 app.listen(8080);
