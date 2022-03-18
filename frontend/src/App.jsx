@@ -183,6 +183,7 @@ const App = () => {
           }}
         ></TextField>
         <EditMenu
+          username={username}
           selection={selection}
           addPost={addPost}
           removePosts={removePosts}
